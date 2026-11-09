@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="ndt-backend-after-title">
+  <title id="ndt-backend-after-title">After: the NDT scan matcher node uses the NdtBackend interface from a small header-only package and loads a backend with pluginlib, by the name in ndt.backend. The omp backend wraps ndt_omp in the node package. A GPU backend in another package implements the same interface.</title>
+  <style data-aw-standalone="">svg { --aw-c-cyan: #0098c7; --aw-c-indigo: var(--aw-indigo); --aw-d-accent: var(--aw-c-cyan); --aw-d-bg: color-mix(in srgb, var(--aw-c-indigo) 2%, var(--md-default-bg-color)); --aw-d-fg: var(--md-default-fg-color); --aw-d-group: color-mix(in srgb, var(--aw-c-indigo) 6%, var(--md-default-bg-color)); --aw-d-group-stroke: color-mix(in srgb, var(--aw-c-indigo) 25%, transparent); --aw-d-line: #8d90a3; --aw-d-muted: var(--md-default-fg-color--light); --aw-d-node: var(--md-default-bg-color); --aw-d-node-stroke: color-mix(in srgb, var(--aw-c-indigo) 45%, transparent); --aw-flow-tone: 22%; --aw-halo-opacity: 0.22; --aw-heading-font-family: Outfit, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; --aw-indigo: #3f2ee3; --md-code-font-family: Roboto Mono, ui-monospace, monospace; --md-default-bg-color: #fff; --md-default-fg-color: #000000de; --md-default-fg-color--light: #0000008c; font-family: var(--aw-heading-font-family); background-color: var(--aw-d-bg, #fff); } .aw-d-arrow {
+  fill: var(--aw-d-line);
+} .aw-d-arrow--accent {
+  fill: var(--aw-d-accent);
+} .box {
+  fill: var(--aw-d-node);
+  stroke: var(--aw-d-node-stroke);
+  stroke-width: 1.5;
+} .box.primary {
+  fill: url("#aw-grad-primary");
+  stroke: none;
+} .box.ext {
+  fill: none;
+  stroke: var(--aw-d-line);
+  stroke-dasharray: 6 5;
+} .group {
+  fill: var(--aw-d-group);
+  stroke: var(--aw-d-group-stroke);
+  stroke-width: 1.5;
+} .group.dashed {
+  stroke-dasharray: 7 5;
+} text {
+  font-size: 14px;
+  fill: var(--aw-d-fg);
+} .lbl {
+  font-weight: 600;
+} .sub {
+  font-size: 12px;
+  fill: var(--aw-d-muted);
+} .code {
+  font-family: var(--md-code-font-family);
+  font-size: 12px;
+} .ttl {
+  font-size: 12px;
+  font-weight: 700;
+  fill: var(--aw-d-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+} .on-primary {
+  fill: #fff;
+} .on-primary.sub {
+  fill: #ffffffc7;
+} .edge-lbl {
+  font-size: 12px;
+  fill: var(--aw-d-muted);
+  paint-order: stroke;
+  stroke: var(--aw-d-bg);
+  stroke-width: 5px;
+  stroke-linejoin: round;
+} .edge {
+  fill: none;
+  stroke: var(--aw-d-line);
+  stroke-width: 1.6;
+  marker-end: url("#aw-arrow");
+} .edge.accent {
+  stroke: var(--aw-d-accent);
+  stroke-width: 2;
+  marker-end: url("#aw-arrow-accent");
+} .edge.dash {
+  stroke-dasharray: 6 5;
+} .aw-dot {
+  fill: var(--aw-d-fg);
+  opacity: 0.12;
+} .dots {
+  fill: url("#aw-dots");
+} .halo {
+  fill: url("#aw-grad-halo");
+  opacity: var(--aw-halo-opacity);
+} .card {
+  fill: var(--aw-d-node);
+  stroke: var(--aw-d-node-stroke);
+  stroke-width: 1.2;
+  filter: url("#aw-shadow");
+} .icon-bg {
+  fill: url("#aw-grad-primary");
+} .icon-bg.on {
+  fill: #ffffff2e;
+} .icon-line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+} .flow {
+  fill: none;
+  stroke: color-mix(in srgb, var(--aw-d-line) var(--aw-flow-tone), #fff);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 6 44;
+  animation: aw-flow 2.4s linear infinite;
+} .flow.flow-accent {
+  stroke: color-mix(in srgb, var(--aw-d-accent) var(--aw-flow-tone), #fff);
+} .edge.head, .edge.accent.head, .traj.head, .route.head {
+  stroke: none;
+} @keyframes aw-flow {
+  from {
+    stroke-dashoffset: 6;
+  }
+
+  to {
+    stroke-dashoffset: -94;
+  }
+} @media (prefers-reduced-motion: reduce) {.flow {
+    display: none;
+    animation: none;
+  }}</style>
+  <defs data-aw-standalone=""><marker
+      id="aw-arrow"
+      viewBox="0 0 10 10"
+      refX="8.5"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path class="aw-d-arrow" d="M0,0.5 L10,5 L0,9.5 z" />
+    </marker><marker
+      id="aw-arrow-accent"
+      viewBox="0 0 10 10"
+      refX="8.5"
+      refY="5"
+      markerWidth="7"
+      markerHeight="7"
+      orient="auto-start-reverse"
+    >
+      <path class="aw-d-arrow aw-d-arrow--accent" d="M0,0.5 L10,5 L0,9.5 z" />
+    </marker><pattern id="aw-dots" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle class="aw-dot" cx="2" cy="2" r="1.1" />
+    </pattern><radialGradient id="aw-grad-halo">
+      <stop offset="0" stop-color="#3f2ee3" stop-opacity="1" />
+      <stop offset="1" stop-color="#3f2ee3" stop-opacity="0" />
+    </radialGradient><linearGradient id="aw-grad-primary" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3f2ee3" />
+      <stop offset="1" stop-color="#2a6df2" />
+    </linearGradient><filter
+      id="aw-shadow"
+      filterUnits="userSpaceOnUse"
+      x="-2000"
+      y="-2000"
+      width="6000"
+      height="6000"
+    >
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00002a" flood-opacity="0.12" />
+    </filter></defs>
+
+  <rect class="dots" x="0" y="0" width="960" height="470"/>
+  <circle class="halo" cx="220" cy="140" r="130"/>
+  <circle class="halo" cx="585" cy="240" r="110"/>
+
+  <!-- The node package -->
+  <rect class="group" x="20" y="20" width="400" height="430" rx="16"/>
+  <text class="ttl" x="40" y="44">Node package</text>
+  <text class="code" x="40" y="62">autoware_ndt_scan_matcher</text>
+
+  <rect class="box primary" x="40" y="80" width="360" height="84" rx="14"/>
+  <circle class="icon-bg on" cx="74" cy="122" r="16"/>
+  <circle class="icon-line" cx="74" cy="122" r="7"/>
+  <path class="icon-line" d="M67 122 H81 M74 122 V129"/>
+  <text class="lbl on-primary" x="102" y="104" dominant-baseline="central">NDT scan matcher node</text>
+  <text class="sub on-primary" x="102" y="125" dominant-baseline="central">Map update, alignment, covariance,</text>
+  <text class="sub on-primary" x="102" y="143" dominant-baseline="central">initial pose search</text>
+
+  <path class="edge accent" d="M220 164 V234"/>
+  <path class="flow flow-accent" pathLength="100" d="M220 164 V230"/>
+  <path class="edge accent head" d="M220 164 V234"/>
+  <text class="edge-lbl" x="220" y="199" text-anchor="middle" dominant-baseline="central">pluginlib loads at startup</text>
+
+  <rect class="card" x="40" y="240" width="360" height="64" rx="14"/>
+  <circle class="icon-bg" cx="72" cy="272" r="16"/>
+  <rect class="icon-line" x="65" y="265" width="14" height="14" rx="3"/>
+  <text class="lbl" x="100" y="261" dominant-baseline="central">omp backend (plugin)</text>
+  <text class="code" x="100" y="283" dominant-baseline="central">ndt.backend: "omp"</text>
+
+  <path class="edge" d="M220 304 V364"/>
+  <text class="edge-lbl" x="220" y="334" text-anchor="middle" dominant-baseline="central">wraps</text>
+
+  <rect class="card" x="40" y="370" width="360" height="64" rx="14"/>
+  <circle class="icon-bg" cx="72" cy="402" r="16"/>
+  <path class="icon-line" d="M64 396 H80 M64 402 H80 M64 408 H80"/>
+  <text class="lbl" x="100" y="391" dominant-baseline="central">ndt_omp</text>
+  <text class="sub" x="100" y="413" dominant-baseline="central">Multigrid NDT on the CPU, unchanged</text>
+
+  <!-- The interface package -->
+  <rect class="group" x="455" y="140" width="260" height="190" rx="16"/>
+  <text class="ttl" x="475" y="164">Interface package</text>
+  <text class="code" x="475" y="182">autoware_ndt_scan_matcher_common</text>
+
+  <rect class="card" x="475" y="198" width="220" height="112" rx="14"/>
+  <text class="lbl" x="585" y="222" text-anchor="middle" dominant-baseline="central">NdtBackend</text>
+  <text class="sub" x="585" y="243" text-anchor="middle" dominant-baseline="central">The interface, headers only</text>
+  <text class="code" x="585" y="265" text-anchor="middle" dominant-baseline="central">NdtParams, NdtResult</text>
+  <text class="sub" x="585" y="287" text-anchor="middle" dominant-baseline="central">Version and Eigen check</text>
+
+  <path class="edge" d="M400 122 H437 V222 H469"/>
+  <text class="edge-lbl" x="437" y="172" text-anchor="middle" dominant-baseline="central">uses</text>
+
+  <path class="edge" d="M400 272 H469"/>
+  <text class="edge-lbl" x="437" y="257" text-anchor="middle" dominant-baseline="central">implements</text>
+
+  <!-- Other packages -->
+  <rect class="group dashed" x="745" y="140" width="195" height="190" rx="16"/>
+  <rect class="box ext" x="765" y="198" width="155" height="64" rx="14"/>
+  <text class="lbl" x="842" y="219" text-anchor="middle" dominant-baseline="central">GPU backend</text>
+  <text class="code" x="842" y="241" text-anchor="middle" dominant-baseline="central">ndt.backend: "cuda"</text>
+  <text class="ttl" x="765" y="290">Other packages</text>
+  <text class="sub" x="765" y="310">For example, the Index</text>
+
+  <path class="edge" d="M765 230 H701"/>
+  <text class="edge-lbl" x="731" y="215" text-anchor="middle" dominant-baseline="central">implements</text>
+
+  <path class="edge dash" d="M400 98 H842 V192"/>
+  <text class="edge-lbl" x="620" y="98" text-anchor="middle" dominant-baseline="central">or pluginlib loads this one</text>
+
+  <text class="sub" x="475" y="370">The parameter ndt.backend selects one backend at startup.</text>
+  <text class="sub" x="475" y="390">A backend depends only on the interface package.</text>
+  <text class="sub" x="475" y="410">A backend built with another Eigen alignment does not load.</text>
+</svg>
