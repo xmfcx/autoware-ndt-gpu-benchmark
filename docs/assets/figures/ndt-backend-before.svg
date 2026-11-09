@@ -144,6 +144,7 @@
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00002a" flood-opacity="0.12" />
     </filter></defs>
 
+  <rect x="0" y="0" width="960" height="330" rx="16" fill="#fff"/>
   <rect class="dots" x="0" y="0" width="960" height="330"/>
   <circle class="halo" cx="220" cy="150" r="130"/>
 

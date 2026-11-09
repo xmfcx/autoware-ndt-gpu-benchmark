@@ -145,6 +145,7 @@
       <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#00002a" flood-opacity="0.12" />
     </filter></defs>
 
+  <rect x="0" y="0" width="960" height="470" rx="16" fill="#fff"/>
   <rect class="dots" x="0" y="0" width="960" height="470"/>
   <circle class="halo" cx="220" cy="140" r="130"/>
   <circle class="halo" cx="585" cy="240" r="110"/>
@@ -201,14 +202,14 @@
 
   <!-- Other packages -->
   <rect class="group dashed" x="745" y="140" width="195" height="190" rx="16"/>
-  <rect class="box ext" x="765" y="198" width="155" height="64" rx="14"/>
+  <rect class="box ext" x="753" y="198" width="179" height="64" rx="14"/>
   <text class="lbl" x="842" y="219" text-anchor="middle" dominant-baseline="central">GPU backend</text>
   <text class="code" x="842" y="241" text-anchor="middle" dominant-baseline="central">ndt.backend: "ndt_cuda"</text>
   <text class="ttl" x="765" y="290">Other packages</text>
   <text class="sub" x="765" y="310">For example, the Index</text>
 
-  <path class="edge" d="M765 230 H701"/>
-  <text class="edge-lbl" x="731" y="215" text-anchor="middle" dominant-baseline="central">implements</text>
+  <path class="edge" d="M753 230 H701"/>
+  <text class="edge-lbl" x="727" y="215" text-anchor="middle" dominant-baseline="central">implements</text>
 
   <path class="edge dash" d="M400 98 H842 V192"/>
   <text class="edge-lbl" x="620" y="98" text-anchor="middle" dominant-baseline="central">or pluginlib loads this one</text>
