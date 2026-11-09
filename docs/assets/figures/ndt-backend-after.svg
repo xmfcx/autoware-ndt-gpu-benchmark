@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="ndt-backend-after-title">
-  <title id="ndt-backend-after-title">After: the NDT scan matcher node uses the NdtBackend interface from a small header-only package and loads a backend with pluginlib, by the name in ndt.backend. The omp backend wraps ndt_omp in the node package. A GPU backend in another package implements the same interface.</title>
+  <title id="ndt-backend-after-title">After: the NDT scan matcher node uses the NdtBackend interface from a small header-only package and loads a backend with pluginlib, by the name in ndt.backend. The ndt_omp backend wraps ndt_omp in the node package. A GPU backend in another package implements the same interface.</title>
   <style data-aw-standalone="">svg { --aw-c-cyan: #0098c7; --aw-c-indigo: var(--aw-indigo); --aw-d-accent: var(--aw-c-cyan); --aw-d-bg: color-mix(in srgb, var(--aw-c-indigo) 2%, var(--md-default-bg-color)); --aw-d-fg: var(--md-default-fg-color); --aw-d-group: color-mix(in srgb, var(--aw-c-indigo) 6%, var(--md-default-bg-color)); --aw-d-group-stroke: color-mix(in srgb, var(--aw-c-indigo) 25%, transparent); --aw-d-line: #8d90a3; --aw-d-muted: var(--md-default-fg-color--light); --aw-d-node: var(--md-default-bg-color); --aw-d-node-stroke: color-mix(in srgb, var(--aw-c-indigo) 45%, transparent); --aw-flow-tone: 22%; --aw-halo-opacity: 0.22; --aw-heading-font-family: Outfit, -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; --aw-indigo: #3f2ee3; --md-code-font-family: Roboto Mono, ui-monospace, monospace; --md-default-bg-color: #fff; --md-default-fg-color: #000000de; --md-default-fg-color--light: #0000008c; font-family: var(--aw-heading-font-family); background-color: var(--aw-d-bg, #fff); } .aw-d-arrow {
   fill: var(--aw-d-line);
 } .aw-d-arrow--accent {
@@ -170,8 +170,8 @@
   <rect class="card" x="40" y="240" width="360" height="64" rx="14"/>
   <circle class="icon-bg" cx="72" cy="272" r="16"/>
   <rect class="icon-line" x="65" y="265" width="14" height="14" rx="3"/>
-  <text class="lbl" x="100" y="261" dominant-baseline="central">omp backend (plugin)</text>
-  <text class="code" x="100" y="283" dominant-baseline="central">ndt.backend: "omp"</text>
+  <text class="lbl" x="100" y="261" dominant-baseline="central">ndt_omp backend (plugin)</text>
+  <text class="code" x="100" y="283" dominant-baseline="central">ndt.backend: "ndt_omp"</text>
 
   <path class="edge" d="M220 304 V364"/>
   <text class="edge-lbl" x="220" y="334" text-anchor="middle" dominant-baseline="central">wraps</text>
@@ -203,7 +203,7 @@
   <rect class="group dashed" x="745" y="140" width="195" height="190" rx="16"/>
   <rect class="box ext" x="765" y="198" width="155" height="64" rx="14"/>
   <text class="lbl" x="842" y="219" text-anchor="middle" dominant-baseline="central">GPU backend</text>
-  <text class="code" x="842" y="241" text-anchor="middle" dominant-baseline="central">ndt.backend: "cuda"</text>
+  <text class="code" x="842" y="241" text-anchor="middle" dominant-baseline="central">ndt.backend: "ndt_cuda"</text>
   <text class="ttl" x="765" y="290">Other packages</text>
   <text class="sub" x="765" y="310">For example, the Index</text>
 
