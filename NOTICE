@@ -1,0 +1,15 @@
+Autoware NDT GPU Benchmark
+Copyright 2026 Mete Fatih Cırıt
+
+The code of this repository is under the Apache License 2.0 (see LICENSE), except as listed here.
+
+Third-party parts:
+
+- patches/ndt_cuda/*.patch change files of meliketanrikulu/ndt_cuda (https://github.com/meliketanrikulu/ndt_cuda).
+  The changed parts keep the licenses of those files: BSD-3-Clause, and Apache-2.0 for the files that ndt_cuda
+  derives from tier4/ndt_omp.
+- patches/fast_gicp/*.patch changes files of koide3/fast_gicp (https://github.com/koide3/fast_gicp), BSD-3-Clause.
+- overlays/cuda_ndt_matcher starts NEWSLabNTU/cuda_ndt_matcher (https://github.com/NEWSLabNTU/cuda_ndt_matcher).
+  This repository does not contain its code. scripts/setup_workspaces.sh downloads it.
+- The data in the release "data-v1" comes from Autoware's sample map and sample rosbag, which Autoware's
+  demo_artifacts Ansible role downloads from autoware-files.s3.us-west-2.amazonaws.com. See docs/data.md.

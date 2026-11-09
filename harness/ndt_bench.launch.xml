@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!-- The smallest Autoware graph that runs the NDT localization loop:
+     map loader -> NDT <-> EKF, with the pose initializer for the initial pose search (called by driver.py).
+     The downsampled scan, the twist (gyro_odometer) and the GNSS pose come from a bag recorded once from the full replay.
+     Same launch files and parameter files as Autoware's logging simulator. -->
+<launch>
+  <arg name="map_path"/>
+  <!-- A single PCD file, or a directory of tiles (then map_path must have pointcloud_map_metadata.yaml) -->
+  <arg name="pointcloud_map_path" default="$(var map_path)/pointcloud_map.pcd"/>
+  <arg name="vehicle_model" default="sample_vehicle"/>
+
+  <group scoped="false">
+    <include file="$(find-pkg-share autoware_global_parameter_loader)/launch/global_params.launch.py">
+      <arg name="use_sim_time" value="true"/>
+      <arg name="vehicle_model" value="$(var vehicle_model)"/>
+    </include>
+  </group>
+
+  <group>
+    <push-ros-namespace namespace="map"/>
+    <include file="$(find-pkg-share autoware_map_launch)/launch/map_loader/pointcloud_map_loader.launch.xml">
+      <arg name="pointcloud_map_path" value="$(var pointcloud_map_path)"/>
+      <arg name="pointcloud_map_metadata_path" value="$(var map_path)/pointcloud_map_metadata.yaml"/>
+    </include>
+  </group>
+
+  <group>
+    <push-ros-namespace namespace="localization"/>
+
+    <group>
+      <push-ros-namespace namespace="pose_estimator"/>
+      <include file="$(find-pkg-share autoware_localization_launch)/launch/pose_twist_estimator/ndt_scan_matcher.launch.xml"/>
+    </group>
+
+    <group>
+      <push-ros-namespace namespace="util"/>
+      <include file="$(find-pkg-share autoware_pose_initializer)/launch/pose_initializer.launch.xml">
+        <arg name="config_file" value="$(find-pkg-share autoware_localization_config)/config/pose_initializer.param.yaml"/>
+        <arg name="ndt_enabled" value="true"/>
+        <arg name="gnss_enabled" value="true"/>
+        <arg name="ekf_enabled" value="true"/>
+        <arg name="stop_check_enabled" value="false"/>
+        <arg name="sub_gnss_pose_cov" value="/sensing/gnss/pose_with_covariance"/>
+      </include>
+      <!-- No pose_initialization_requester: driver.py calls /localization/initialize itself and times it. -->
+    </group>
+
+    <group>
+      <push-ros-namespace namespace="pose_twist_fusion_filter"/>
+      <include file="$(find-pkg-share autoware_localization_launch)/launch/pose_twist_fusion_filter/pose_twist_fusion_filter.launch.xml"/>
+    </group>
+  </group>
+</launch>

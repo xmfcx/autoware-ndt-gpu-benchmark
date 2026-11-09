@@ -1,0 +1,6 @@
+variant=cuda_ndt_matcher name=r8_run4 map=single rate=8 ndt_cpus=0-3,12-15 other_cpus=4-11,16-23 gpu_trace=0
+2026-11-09T16:58:48+03:00
+NVIDIA GeForce RTX 3090, 595.99.02, 225 MHz, 60, 4 %
+ 16:58:48 up 2 days,  1:51,  1 user,  load average: 4.44, 3.97, 3.56
+ndt_pid=3573503
+driver_exit=0 wall_s=8.529583897

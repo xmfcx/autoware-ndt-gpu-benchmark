@@ -1,0 +1,6 @@
+variant=fast_gicp name=open_r8_run3 map=single open_loop=1 ndt_param=default rate=8 ndt_cpus=0-3,12-15 other_cpus=4-11,16-23 gpu_trace=0
+2026-11-09T17:30:22+03:00
+NVIDIA GeForce RTX 3090, 595.99.02, 225 MHz, 60, 16 %
+ 17:30:22 up 2 days,  2:22,  1 user,  load average: 3.12, 2.73, 2.75
+ndt_pid=1180235
+driver_exit=0 wall_s=6.195018275

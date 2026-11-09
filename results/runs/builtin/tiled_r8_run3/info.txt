@@ -1,0 +1,6 @@
+variant=builtin name=tiled_r8_run3 map=tiled rate=8 ndt_cpus=0-3,12-15 other_cpus=4-11,16-23 gpu_trace=0
+2026-11-09T16:56:47+03:00
+NVIDIA GeForce RTX 3090, 595.99.02, 225 MHz, 60, 3 %
+ 16:56:47 up 2 days,  1:49,  1 user,  load average: 3.13, 3.61, 3.39
+ndt_pid=3455353
+driver_exit=0 wall_s=10.900800359

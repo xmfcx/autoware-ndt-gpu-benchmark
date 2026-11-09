@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!-- Open-loop variant of ndt_bench.launch.xml: only the map loader and NDT. No EKF and no pose initializer.
+     The bag plays the downsampled scans and the EKF poses of a reference run (NDT's initial guesses), so every scan
+     matcher gets the same initial guess for every scan. driver.py activates NDT with its trigger_node service. -->
+<launch>
+  <arg name="map_path"/>
+  <!-- A single PCD file, or a directory of tiles (then map_path must have pointcloud_map_metadata.yaml) -->
+  <arg name="pointcloud_map_path" default="$(var map_path)/pointcloud_map.pcd"/>
+  <arg name="vehicle_model" default="sample_vehicle"/>
+  <!-- NDT parameter file: Autoware's by default -->
+  <arg name="ndt_param_path" default="$(find-pkg-share autoware_localization_config)/config/ndt_scan_matcher/ndt_scan_matcher.param.yaml"/>
+
+  <group scoped="false">
+    <include file="$(find-pkg-share autoware_global_parameter_loader)/launch/global_params.launch.py">
+      <arg name="use_sim_time" value="true"/>
+      <arg name="vehicle_model" value="$(var vehicle_model)"/>
+    </include>
+  </group>
+
+  <group>
+    <push-ros-namespace namespace="map"/>
+    <include file="$(find-pkg-share autoware_map_launch)/launch/map_loader/pointcloud_map_loader.launch.xml">
+      <arg name="pointcloud_map_path" value="$(var pointcloud_map_path)"/>
+      <arg name="pointcloud_map_metadata_path" value="$(var map_path)/pointcloud_map_metadata.yaml"/>
+    </include>
+  </group>
+
+  <group>
+    <push-ros-namespace namespace="localization"/>
+
+    <group>
+      <push-ros-namespace namespace="pose_estimator"/>
+      <include file="$(find-pkg-share autoware_localization_launch)/launch/pose_twist_estimator/ndt_scan_matcher.launch.xml">
+        <arg name="ndt_scan_matcher/ndt_scan_matcher_param_path" value="$(var ndt_param_path)"/>
+      </include>
+    </group>
+
+  </group>
+</launch>

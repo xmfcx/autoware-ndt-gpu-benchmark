@@ -1,0 +1,14 @@
+# Local configuration, data, builds and run artifacts
+config/local.env
+data/
+workspaces/
+site/
+.cache/
+results/runs/**/roslog/
+results/runs/**/*.nsys-rep
+results/runs/**/*.sqlite
+results/runs/**/play.log
+results/runs/**/driver.log
+results/runs/**/taskset.txt
+__pycache__/
+tools/copy_stall/copy_stall_*

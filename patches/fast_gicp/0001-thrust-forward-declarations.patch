@@ -1,0 +1,43 @@
+--- a/include/fast_gicp/cuda/ndt_cuda.cuh
++++ b/include/fast_gicp/cuda/ndt_cuda.cuh
+@@ -9,16 +9,8 @@
+ #include <fast_gicp/ndt/ndt_settings.hpp>
+ #include <fast_gicp/gicp/gicp_settings.hpp>
+ 
+-namespace thrust {
+-template <typename T1, typename T2>
+-class pair;
+-
+-template <typename T>
+-class device_allocator;
+-
+-template <typename T, typename Alloc>
+-class device_vector;
+-}  // namespace thrust
++#include <thrust/pair.h>
++#include <thrust/device_vector.h>
+ 
+ namespace fast_gicp {
+ namespace cuda {
+--- a/include/fast_gicp/cuda/fast_vgicp_cuda.cuh
++++ b/include/fast_gicp/cuda/fast_vgicp_cuda.cuh
+@@ -8,17 +8,8 @@
+ 
+ #include <fast_gicp/gicp/gicp_settings.hpp>
+ 
+-namespace thrust {
+-
+-template <typename T1, typename T2>
+-class pair;
+-
+-template <typename T>
+-class device_allocator;
+-
+-template <typename T, typename Alloc>
+-class device_vector;
+-}  // namespace thrust
++#include <thrust/pair.h>
++#include <thrust/device_vector.h>
+ 
+ namespace fast_gicp {
+ namespace cuda {

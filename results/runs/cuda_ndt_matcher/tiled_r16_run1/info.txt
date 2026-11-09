@@ -1,0 +1,6 @@
+variant=cuda_ndt_matcher name=tiled_r16_run1 map=tiled rate=16 ndt_cpus=0-3,12-15 other_cpus=4-11,16-23 gpu_trace=0
+2026-11-09T17:07:29+03:00
+NVIDIA GeForce RTX 3090, 595.99.02, 225 MHz, 60, 3 %
+ 17:07:29 up 2 days,  1:59,  1 user,  load average: 4.25, 3.75, 3.60
+ndt_pid=4082834
+driver_exit=0 wall_s=6.648206078

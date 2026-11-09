@@ -1,0 +1,6 @@
+variant=fast_gicp name=tiled_r8_trace map=tiled rate=8 ndt_cpus=0-3,12-15 other_cpus=4-11,16-23 gpu_trace=1
+2026-11-09T17:06:06+03:00
+NVIDIA GeForce RTX 3090, 595.99.02, 225 MHz, 60, 2 %
+ 17:06:06 up 2 days,  1:58,  1 user,  load average: 2.68, 3.35, 3.47
+ndt_pid=4001879
+driver_exit=0 wall_s=9.068732795

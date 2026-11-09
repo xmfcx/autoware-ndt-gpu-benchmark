@@ -1,0 +1,18 @@
+{
+ "ndt_pid": 4001879,
+ "busy_ms": 535.208325,
+ "windows": {
+  "init": {
+   "busy_ms": 405.009554,
+   "window_s": 1.648327112197876
+  },
+  "tracking": {
+   "busy_ms": 130.188883,
+   "window_s": 4.459413528442383
+  }
+ },
+ "kernels": 119063,
+ "copies_and_memsets": 30672,
+ "trace_s": 8.858148448,
+ "other_pids_busy_ms": {}
+}
