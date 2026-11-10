@@ -181,7 +181,7 @@
   <circle class="icon-bg" cx="72" cy="402" r="16"/>
   <path class="icon-line" d="M64 396 H80 M64 402 H80 M64 408 H80"/>
   <text class="lbl" x="100" y="391" dominant-baseline="central">ndt_omp</text>
-  <text class="sub" x="100" y="413" dominant-baseline="central">Multigrid NDT on the CPU, unchanged</text>
+  <text class="sub" x="100" y="413" dominant-baseline="central">Multigrid NDT on the CPU, same algorithm</text>
 
   <!-- The interface package -->
   <rect class="group" x="455" y="140" width="260" height="190" rx="16"/>
